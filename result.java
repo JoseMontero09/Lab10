@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -45,5 +47,42 @@ public class result {
                 cero++;
         }
         System.out.println(String.format("%.6f",(double)(negativo/arr.size()))+"\n"+String.format("%.6f",(double)(positivo/arr.size()))+"\n"+String.format("%.6f",(double)(cero/arr.size())));
+    }
+    public static int birthdayCakeCandles(List<Integer> candles) {
+
+        int candelas =  0;
+        int mayor = 0;
+
+        for(int i = 0; i < candles.size(); i++){
+            if(candles.get(i) > mayor)
+                mayor = candles.get(i);
+        }
+        for(int i = 0; i < candles.size(); i++){
+            if(candles.get(i) == mayor){
+                candelas++;
+            }
+        }
+        return candelas;
+
+    }
+    public static List<Integer> cutTheSticks(List<Integer> arr) {
+        // Write your code here
+        List <Integer> resultado =new ArrayList<>();
+        while (!arr.isEmpty()){
+            resultado.add(arr.size());
+
+            int pequeno = Collections.min(arr);
+
+            List<Integer> nuevos = new ArrayList<>();
+            for(int stick : arr){
+                int cut = stick - pequeno;
+                if(cut > 0){
+                    nuevos.add(cut);
+                }
+            }
+            arr= nuevos;
+        }
+        return resultado;
+
     }
 }
