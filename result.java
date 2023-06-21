@@ -30,4 +30,20 @@ public class result {
 
         }
     }
+    public static void plusMinus(List<Integer> arr) {
+
+        double positivo = 0;
+        double negativo = 0;
+        double cero = 0;
+
+        for(int i = 0; i < arr.size(); i++){
+            if(arr.get(i) < 0){
+                positivo++;
+            }else if(arr.get(i) > 0){
+                negativo++;
+            }else
+                cero++;
+        }
+        System.out.println(String.format("%.6f",(double)(negativo/arr.size()))+"\n"+String.format("%.6f",(double)(positivo/arr.size()))+"\n"+String.format("%.6f",(double)(cero/arr.size())));
+    }
 }
