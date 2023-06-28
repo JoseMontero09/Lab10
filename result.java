@@ -92,4 +92,10 @@ public class result {
     long result = (long) n*m-1;
         return result;
 }
+    public static int gameWithCells(int n, int m) {
+
+      int MinimosPaquetes = ((n/2) + (n%2)) * ((m/2) + (m%2));
+      return MinimosPaquetes;
+
+    }
 }
