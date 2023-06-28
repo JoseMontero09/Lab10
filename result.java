@@ -92,5 +92,4 @@ public class result {
     long result = (long) n*m-1;
         return result;
 }
-
 }
