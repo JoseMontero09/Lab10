@@ -86,3 +86,9 @@ public class result {
 
     }
 }
+
+ public static long solve(int n, int m) {
+    // Write your code here
+    long result = (long) n*m-1;
+        return result;
+}
